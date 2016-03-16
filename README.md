@@ -22,12 +22,12 @@ Set of python scripts, zabbix template, and associated data to do autodiscovery
 
 
 ## CONFIGURATION:
-You may optionally create a .rab.auth file in the scripts/ directory. This file allows you to change default parameters. The format is `VARIABLE=value`, one per line:
+You may optionally create a .rab.auth file in the scripts/rabbitmq/ directory. Make sure .rab.auth is executable by zabbix user,  This file allows you to change default parameters. The format is `VARIABLE=value`, one per line:
 The default values are as follows:
 
     USERNAME=guest
     PASSWORD=guest
-    CONF=/etc/zabbix/zabbix_agent.conf
+    CONF=/etc/zabbix/zabbix_agentd.conf
 
 You can also add a filter in this file to restrict which queues are monitored.
 This item is a JSON-encoded string. The format provides some flexibility for

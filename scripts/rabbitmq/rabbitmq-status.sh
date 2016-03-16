@@ -9,12 +9,13 @@ cd "$(dirname "$0")"
 
 TYPE_OF_CHECK=$1
 METRIC=$2
-NODE=$3
 
 if [[ -z "$HOSTNAME" ]]; then
     HOSTNAME=`hostname`
 fi
-if [[ -z "$NODE" ]]; then
+if [[ -z "$3" ]]; then
+    NODE=$3
+else
     NODE=`hostname`
 fi
 #rabbitmq[queues]
